@@ -1,0 +1,11 @@
+{
+  "path": "./test_downloads",
+  "filters": [
+    { "type": "extension", "value": [".mp4", ".mkv", ".txt"] },
+    { "type": "name_regex", "value": "7_(\\d+)" }
+  ],
+  "actions": [
+    { "type": "rename", "value": "One Piece {1}" },
+    { "type": "move", "value": "./test_anime" }
+  ]
+}

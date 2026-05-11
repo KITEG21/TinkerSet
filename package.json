@@ -1,0 +1,29 @@
+{
+  "name": "tinkerset",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TinkerSet - Tauri + React + FastAPI",
+  "scripts": {
+    "build": "cd frontend && npm run build",
+    "frontend:install": "cd frontend && npm install",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:lint": "cd frontend && npm run lint",
+    "frontend:format": "cd frontend && npm run format",
+    "frontend:format:check": "cd frontend && npm run format:check",
+    "backend:install": "python -m pip install -r requirements.txt -r requirements-dev.txt",
+    "backend:dev": "python -m app.run",
+    "backend:lint": "python -m ruff check app scripts tests",
+    "backend:format": "python -m black app scripts tests",
+    "backend:format:check": "python -m black --check app scripts tests && python -m ruff check app scripts tests",
+    "tauri:dev": "cd frontend && npm run tauri:dev",
+    "tauri:build": "set \"PATH=C:\\msys64\\mingw64\\bin;%PATH%\" && cd frontend && npm run build && cd src-tauri && cargo build --release"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-dialog": "^2.7.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.0"
+  }
+}
